@@ -1,0 +1,135 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 349
+  ClientWidth = 366
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Um: TSpeedButton
+    Left = 1
+    Top = 62
+    Width = 65
+    Height = 65
+    Caption = '1'
+  end
+  object SpeedButton19: TSpeedButton
+    Left = 1
+    Top = 133
+    Width = 65
+    Height = 65
+  end
+  object SpeedButton20: TSpeedButton
+    Left = 1
+    Top = 204
+    Width = 65
+    Height = 65
+  end
+  object SpeedButton21: TSpeedButton
+    Left = 1
+    Top = 275
+    Width = 65
+    Height = 65
+  end
+  object SpeedButton1: TSpeedButton
+    Left = 72
+    Top = 62
+    Width = 65
+    Height = 65
+    Caption = '2'
+  end
+  object SpeedButton2: TSpeedButton
+    Left = 72
+    Top = 204
+    Width = 65
+    Height = 65
+  end
+  object SpeedButton3: TSpeedButton
+    Left = 72
+    Top = 133
+    Width = 65
+    Height = 65
+  end
+  object SpeedButton4: TSpeedButton
+    Left = 72
+    Top = 275
+    Width = 136
+    Height = 65
+  end
+  object SpeedButton5: TSpeedButton
+    Left = 143
+    Top = 62
+    Width = 65
+    Height = 65
+  end
+  object SpeedButton6: TSpeedButton
+    Left = 143
+    Top = 204
+    Width = 65
+    Height = 65
+  end
+  object SpeedButton7: TSpeedButton
+    Left = 143
+    Top = 133
+    Width = 65
+    Height = 65
+  end
+  object SpeedButton8: TSpeedButton
+    Left = 225
+    Top = 275
+    Width = 65
+    Height = 65
+  end
+  object SpeedButton9: TSpeedButton
+    Left = 225
+    Top = 204
+    Width = 65
+    Height = 65
+  end
+  object SpeedButton10: TSpeedButton
+    Left = 225
+    Top = 133
+    Width = 65
+    Height = 65
+  end
+  object SpeedButton11: TSpeedButton
+    Left = 225
+    Top = 62
+    Width = 65
+    Height = 65
+  end
+  object SpeedButton12: TSpeedButton
+    Left = 296
+    Top = 133
+    Width = 65
+    Height = 65
+  end
+  object SpeedButton13: TSpeedButton
+    Left = 296
+    Top = 62
+    Width = 65
+    Height = 65
+  end
+  object SpeedButton14: TSpeedButton
+    Left = 296
+    Top = 204
+    Width = 65
+    Height = 136
+  end
+  object Edit1: TEdit
+    Left = 0
+    Top = 7
+    Width = 377
+    Height = 49
+    AutoSize = False
+    TabOrder = 0
+    Text = 'Edit1'
+  end
+end

@@ -1,0 +1,147 @@
+unit UntCalculadora1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Buttons, Vcl.StdCtrls;
+
+type
+  TFrmcalc = class(TForm)
+    visor: TEdit;
+    Um: TSpeedButton;
+    quatro: TSpeedButton;
+    sete: TSpeedButton;
+    limpar: TSpeedButton;
+    dois: TSpeedButton;
+    oito: TSpeedButton;
+    cinco: TSpeedButton;
+    zero: TSpeedButton;
+    Tres: TSpeedButton;
+    nove: TSpeedButton;
+    seis: TSpeedButton;
+    multiplicar: TSpeedButton;
+    dividir: TSpeedButton;
+    menos: TSpeedButton;
+    mais: TSpeedButton;
+    virgula: TSpeedButton;
+    maismenos: TSpeedButton;
+    igual: TSpeedButton;
+    procedure UmClick(Sender: TObject);
+    procedure maisClick(Sender: TObject);
+    procedure menosClick(Sender: TObject);
+    procedure dividirClick(Sender: TObject);
+    procedure multiplicarClick(Sender: TObject);
+    procedure maismenosClick(Sender: TObject);
+    procedure virgulaClick(Sender: TObject);
+    procedure limparClick(Sender: TObject);
+    procedure igualClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Frmcalc: TFrmcalc;
+  valor1 : real;
+  valor2 : real;
+  funcao : integer;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFrmcalc.dividirClick(Sender: TObject);
+begin
+  valor1 := StrToFloat(visor.text);
+  visor.Text :='';
+  funcao := 4;
+end;
+
+procedure TFrmcalc.FormShow(Sender: TObject);
+begin
+valor1:=0;
+valor2:=0;
+end;
+
+procedure TFrmcalc.igualClick(Sender: TObject);
+var soma,subtrair,multiplicar,dividir : real;
+begin
+  valor2:= StrToFloat(visor.Text);
+  case (funcao) of
+  1:
+  begin
+    soma:=valor1+valor2;
+    visor.Text:=FloatToStr(soma);
+  end;
+    2:
+    begin
+      subtrair :=valor1-valor2;
+      visor.Text:=FloatToStr(subtrair);
+    end;
+      3:
+      begin
+        multiplicar := valor1*valor2;
+        visor.Text:=FloatToStr(multiplicar);
+      end;
+        4:
+        begin
+          if (valor2 <> 0) then
+            begin
+              dividir := valor1/valor2;
+              visor.Text:=FloatToStr(dividir);
+            end
+              else
+                begin
+                  showmessage('Divisão por zero!');
+                end;
+        end;
+  end;
+end;
+
+procedure TFrmcalc.limparClick(Sender: TObject);
+begin
+  visor.Clear;
+end;
+
+procedure TFrmcalc.maisClick(Sender: TObject);
+begin
+  valor1 := StrToFloat(visor.text);
+  visor.Text :='';
+  funcao := 1;
+end;
+
+procedure TFrmcalc.maismenosClick(Sender: TObject);
+begin
+ visor.Text := '-' + visor.Text;
+end;
+
+procedure TFrmcalc.menosClick(Sender: TObject);
+begin
+  valor1 := StrToFloat(visor.text);
+  visor.Text :='';
+  funcao := 2;
+end;
+
+procedure TFrmcalc.multiplicarClick(Sender: TObject);
+begin
+  valor1 := StrToFloat(visor.text);
+  visor.Text :='';
+  funcao := 3;
+end;
+
+procedure TFrmcalc.UmClick(Sender: TObject);
+begin
+  visor.text := visor.text + (sender as tspeedbutton).Caption
+end;
+
+procedure TFrmcalc.virgulaClick(Sender: TObject);
+begin
+  valor1 := StrToFloat(visor.text);
+  visor.Text :='';
+  funcao := 2;
+end;
+
+end.
